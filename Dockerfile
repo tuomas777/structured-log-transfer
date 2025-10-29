@@ -12,7 +12,7 @@ RUN dnf install -y dnf-plugins-core \
         pkg-config \
         postgresql \
         mysql \
-    && pip install -U pip \
+    && pip install "pip<25.3" \
     && pip install pip-tools \
     && pip install mysqlclient \
     && pip-compile requirements.in \
